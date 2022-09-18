@@ -1,0 +1,4 @@
+{
+  "reader": "json",
+  "path": "../../../data/key_value.json"
+}

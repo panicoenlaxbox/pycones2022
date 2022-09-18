@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+dependency-injector = "*"
+pyyaml = "*"
+fastjsonschema = "*"
+importlib-resources = "*"
+
+[dev-packages]
+pytest = "*"
+mypy = "*"
+black = "*"
+isort = "*"
+pre-commit = "*"
+flake8 = "*"
+assertpy = "*"
+types-pyyaml = "*"
+
+[requires]
+python_version = "3.10"
