@@ -5,6 +5,7 @@ In this repository you can find the code and the [presentation](dependency_injec
 # Installation
 
 ```commandline
+git clone https://github.com/panicoenlaxbox/pycones2022.git
 pipenv install --dev
 git init
 pipenv shell
