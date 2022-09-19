@@ -10,7 +10,7 @@ from dependency_injection.dependency_injector_example.assets import (
 
 
 class Container(DeclarativeContainer):
-    _config = providers.Configuration(json_files=["config.json"], strict=True)
+    _config = providers.Configuration(json_files=["config.json"])
     resource_loader = providers.Factory(
         ResourceLoader, providers.Object("dependency_injection.dependency_injector_example.resources")
     )

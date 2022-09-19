@@ -1,6 +1,6 @@
 # Dependency injection in Python 
 
-In this repository you can find the code and the [presentation](dependency_injection.pdf) of the talk [Inyección de dependencias, fácil!](https://charlas.2022.es.pycon.org/pycones2022/talk/HHM3H7/) from [PyConES 2022](https://2022.es.pycon.org/)
+In this repository you can find the code and the [presentation](presentation.pdf) of the talk [Inyección de dependencias, fácil!](https://charlas.2022.es.pycon.org/pycones2022/talk/HHM3H7/) from [PyConES 2022](https://2022.es.pycon.org/)
 
 # Installation
 
