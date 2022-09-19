@@ -4,6 +4,5 @@ from dependency_injection.dependency_injector_example.containers import Containe
 
 
 @pytest.fixture
-def container():
-    container = Container()
-    yield container
+def container() -> Container:
+    return Container()

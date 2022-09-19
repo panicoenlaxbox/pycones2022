@@ -1,4 +1,4 @@
-from unittest.mock import create_autospec
+from unittest.mock import MagicMock, create_autospec
 
 from assertpy import assert_that
 
@@ -6,9 +6,14 @@ from dependency_injection.dependency_injector_example.assets import KeyValuePair
 from dependency_injection.dependency_injector_example.containers import Container
 
 
-def test_create_a_new_container_instance():
+def create_mock_reader() -> MagicMock:
     mock_reader = create_autospec(spec=Reader, spec_set=True, instance=True)
     mock_reader.read.return_value = [KeyValuePair("a_key", "a_value")]
+    return mock_reader
+
+
+def test_create_a_new_container_instance() -> None:
+    mock_reader = create_mock_reader()
     container = Container(reader=mock_reader)
     reader: Reader = container.reader()
 
@@ -17,9 +22,8 @@ def test_create_a_new_container_instance():
     assert_that(actual).is_equal_to([KeyValuePair("a_key", "a_value")])
 
 
-def test_use_an_existing_container_as_a_fixture(container: Container):
-    mock_reader = create_autospec(spec=Reader, spec_set=True, instance=True)
-    mock_reader.read.return_value = [KeyValuePair("a_key", "a_value")]
+def test_use_an_existing_container_as_a_fixture(container: Container) -> None:
+    mock_reader = create_mock_reader()
     with container.override_providers(reader=mock_reader):
         reader: Reader = container.reader()
 
