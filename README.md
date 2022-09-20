@@ -25,3 +25,4 @@ pre-commit autoupdate
 - https://www.manning.com/books/dependency-injection-in-dot-net
 - https://python-dependency-injector.ets-labs.org/
 - https://github.com/ets-labs/python-dependency-injector/issues/339#issuecomment-747820448
+- https://blog.ploeh.dk/2010/02/03/ServiceLocatorisanAnti-Pattern/

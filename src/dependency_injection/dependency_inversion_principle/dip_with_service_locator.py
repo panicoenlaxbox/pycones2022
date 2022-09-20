@@ -16,16 +16,16 @@ class DbOrdersRepository(OrdersRepository):  # Low-level module depends on abstr
         ...
 
 
-class Container:
+class ServiceLocator:
     @staticmethod
-    def create_repository() -> OrdersRepository:
+    def resolve_repository() -> OrdersRepository:
         return DbOrdersRepository()
 
 
 class ShopCartService:
     def __init__(self) -> None:
         # High-level module depends on abstraction
-        self._repository = Container.create_repository()  # Service locator
+        self._repository = ServiceLocator.resolve_repository()  # Service locator
 
     def checkout(self) -> None:
         order = Order()
