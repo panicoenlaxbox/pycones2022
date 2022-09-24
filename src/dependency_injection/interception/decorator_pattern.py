@@ -1,26 +1,19 @@
-import abc
 import time
 from typing import Callable
 
 
-class ShopCartServiceBase(abc.ABC):
-    @abc.abstractmethod
-    def checkout(self) -> None:
-        ...
-
-
-class ShopCartService(ShopCartServiceBase):
+class ShopCartService:
     def checkout(self) -> None:
         print("Checkout is in progress...")
         time.sleep(3)
 
 
-class TimedShopCartService(ShopCartServiceBase):  # Decorator pattern
+class TimedShopCartService(ShopCartService):
     def __init__(self, shop_cart_service: ShopCartService) -> None:
         self._shop_cart_service = shop_cart_service
 
     @staticmethod
-    def _timed_operation(func: Callable) -> None:
+    def _timer(func: Callable) -> None:
         tic = time.perf_counter()
 
         func()
@@ -30,8 +23,8 @@ class TimedShopCartService(ShopCartServiceBase):  # Decorator pattern
         print(f"Elapsed time: {elapsed_time:0.4f} seconds")
 
     def checkout(self) -> None:
-        self._timed_operation(self._shop_cart_service.checkout)
+        self._timer(self._shop_cart_service.checkout)
 
 
-service = TimedShopCartService(ShopCartService())
+service: ShopCartService = TimedShopCartService(ShopCartService())
 service.checkout()
