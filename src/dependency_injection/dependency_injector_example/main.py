@@ -19,6 +19,7 @@ if __name__ == "__main__":
     # https://github.com/ets-labs/python-dependency-injector/issues/339#issuecomment-747820448
     container = Container()
     container.wire(modules=[__name__])
+
     main()
 
     # container = Container()

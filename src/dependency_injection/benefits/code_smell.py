@@ -1,36 +1,47 @@
-# region Classes
-class Foo:
-    ...
+# flake8: noqa
+class Order:
+    pass
 
 
-class Bar:
-    ...
+class StockAllocator:
+    pass
 
 
-class Baz:
-    ...
+class PriceCalculator:
+    pass
 
 
-class Qux:
-    ...
+class CustomerScoreChecker:
+    pass
 
 
-class Quux:
-    ...
+class MailSender:
+    pass
 
 
-# endregion
+class OrderAllocator:
+    def __init__(self) -> None:
+        ...
+
+    def allocate(self, order: Order) -> None:
+        stock_allocator = StockAllocator()
+        price_calculator = PriceCalculator()
+        customer_score_checker = CustomerScoreChecker()
+        mail_sender = MailSender()
 
 
-class Corge:
-    def __init__(self) -> None:  # Code smell?
-        self._foo = Foo()
-        self._bar = Bar()
-        self._baz = Baz()
-        self._qux = Qux()
-        self._quux = Quux()
+class OtherAllocator2:
+    def __init__(
+        self,
+        stock_allocator: StockAllocator,
+        price_calculator: PriceCalculator,
+        customer_score_checker: CustomerScoreChecker,
+        main_sender: MailSender,
+    ) -> None:
+        self._stock_allocator = stock_allocator
+        self._price_calculator = price_calculator
+        self._customer_score_checker = customer_score_checker
+        self._main_sender = main_sender
 
-
-class CorgeDI:
-    def __init__(self, foo: Foo, bar: Bar, baz: Baz, qux: Qux, quux: Quux) -> None:  # Code smell
+    def allocate(self, order: Order) -> None:
         ...

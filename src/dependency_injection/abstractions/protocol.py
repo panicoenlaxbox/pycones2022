@@ -5,7 +5,7 @@ class Order:
     ...
 
 
-class Save(Protocol):  # Explicit protocol
+class Save(Protocol):  # Explicit protocol, duck typing with types safety
     def save(self, order: Order) -> None:
         ...
 
@@ -13,6 +13,9 @@ class Save(Protocol):  # Explicit protocol
 class DbOrdersRepository(Save):  # Implements protocol
     def save(self, order: Order) -> None:
         print("Saving in db...")
+
+    def a_method_that_does_not_belong_to_the_protocol(self) -> None:
+        ...
 
 
 class ShopCartService:
