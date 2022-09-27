@@ -26,5 +26,9 @@ class TimedShopCartService(ShopCartService):
         self._timer(self._shop_cart_service.checkout)
 
 
-service: ShopCartService = TimedShopCartService(ShopCartService())
-service.checkout()
+def main(shop_cart_service: ShopCartService) -> None:
+    shop_cart_service.checkout()
+
+
+if __name__ == "__main__":
+    main(TimedShopCartService(ShopCartService()))
