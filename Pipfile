@@ -8,6 +8,7 @@ dependency-injector = "*"
 pyyaml = "*"
 fastjsonschema = "*"
 importlib-resources = "*"
+requests = "*"
 
 [dev-packages]
 pytest = "*"
@@ -18,6 +19,7 @@ pre-commit = "*"
 flake8 = "*"
 assertpy = "*"
 types-pyyaml = "*"
+types-requests = "*"
 
 [requires]
 python_version = "3.10"

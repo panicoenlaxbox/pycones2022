@@ -2,8 +2,8 @@ from unittest.mock import MagicMock, create_autospec
 
 from assertpy import assert_that
 
-from dependency_injection.dependency_injector_example.assets import KeyValuePair, Reader
-from dependency_injection.dependency_injector_example.containers import Container
+from dependency_injection.dependency_injector_library.assets import KeyValuePair, Reader
+from dependency_injection.dependency_injector_library.containers import Container
 
 
 def create_mock_reader() -> MagicMock:

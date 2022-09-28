@@ -1,7 +1,7 @@
 from pprint import pprint
 
-from dependency_injection.dependency_injector_example.assets import Reader
-from dependency_injection.dependency_injector_example.containers import Container
+from dependency_injection.dependency_injector_library.assets import Reader
+from dependency_injection.dependency_injector_library.containers import Container
 
 
 def main(reader: Reader, path: str) -> None:

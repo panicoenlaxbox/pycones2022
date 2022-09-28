@@ -1,7 +1,7 @@
 from dependency_injector import providers
 from dependency_injector.containers import DeclarativeContainer
 
-from dependency_injection.dependency_injector_example.assets import (
+from dependency_injection.dependency_injector_library.assets import (
     JsonFileReader,
     JsonSchemaValidator,
     ResourceLoader,
@@ -12,7 +12,7 @@ from dependency_injection.dependency_injector_example.assets import (
 class Container(DeclarativeContainer):
     _config = providers.Configuration(json_files=["config.json"])
     resource_loader = providers.Factory(
-        ResourceLoader, providers.Object("dependency_injection.dependency_injector_example.resources")
+        ResourceLoader, providers.Object("dependency_injection.dependency_injector_library.resources")
     )
     json_schema_validator = providers.Factory(JsonSchemaValidator, resource_loader)
     reader = providers.Selector(

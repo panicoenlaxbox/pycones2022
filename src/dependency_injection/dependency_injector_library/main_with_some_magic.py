@@ -2,8 +2,8 @@ from pprint import pprint
 
 from dependency_injector.wiring import Provide, inject
 
-from dependency_injection.dependency_injector_example.assets import Reader
-from dependency_injection.dependency_injector_example.containers import Container
+from dependency_injection.dependency_injector_library.assets import Reader
+from dependency_injection.dependency_injector_library.containers import Container
 
 
 @inject

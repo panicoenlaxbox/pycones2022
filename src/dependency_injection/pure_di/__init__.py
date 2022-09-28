@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     main(
         JsonFileReader(
-            JsonSchemaValidator(ResourceLoader("dependency_injection.dependency_injector_example.resources"))
+            JsonSchemaValidator(ResourceLoader("dependency_injection.dependency_injector_library.resources"))
         ),
         "../../../data/key_value.json",
     )
