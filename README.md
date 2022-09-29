@@ -2,7 +2,7 @@
 
 In this repository you can find the code and the [presentation](presentation.pdf) of the talk [Inyección de dependencias, fácil!](https://charlas.2022.es.pycon.org/pycones2022/talk/HHM3H7/) from [PyConES 2022](https://2022.es.pycon.org/)
 
-## Talk is cheap. Show me the code.
+## Examples
 
 - [src/dependency_injection/dependency_inversion/abstraction_implementation.py](src/dependency_injection/dependency_inversion/abstraction_implementation.py)
 - [src/dependency_injection/dependency_inversion](src/dependency_injection/dependency_inversion)
@@ -10,10 +10,8 @@ In this repository you can find the code and the [presentation](presentation.pdf
 - [src/dependency_injection/abstractions/protocol.py](src/dependency_injection/abstractions/protocol.py)
 - [src/dependency_injection/benefits/more_implementations.py](src/dependency_injection/benefits/more_implementations.py)
 - [src/dependency_injection/benefits/code_smell.py](src/dependency_injection/benefits/code_smell.py)
-- [tests/testing/test_monkey_patching](tests/testing/test_monkey_patching.py)
+- [tests/testing/test_monkey_patching.py](tests/testing/test_monkey_patching.py)
 - [tests/testing/test_mocking.py](tests/testing/test_mocking.py)
-- [src/dependency_injection/interception/decorator.py](src/dependency_injection/interception/decorator.py)
-- [src/dependency_injection/interception/decorator_pattern.py](src/dependency_injection/interception/decorator_pattern.py)
 - [src/dependency_injection/pure_di](src/dependency_injection/pure_di)
 - [src/dependency_injection/dependency_injector_library/main_with_no_magic.py](src/dependency_injection/dependency_injector_library/main_with_no_magic.py)
 - [src/dependency_injection/dependency_injector_library/main_with_magic.py](src/dependency_injection/dependency_injector_library/main_with_magic.py)

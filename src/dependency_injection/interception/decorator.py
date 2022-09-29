@@ -24,5 +24,6 @@ class ShopCartService:
         time.sleep(3)
 
 
-service = ShopCartService()
-service.checkout()
+if __name__ == "__main__":
+    service = ShopCartService()
+    service.checkout()
