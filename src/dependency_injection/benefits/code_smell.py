@@ -1,8 +1,4 @@
 # flake8: noqa
-class Order:
-    pass
-
-
 class StockAllocator:
     pass
 
@@ -23,14 +19,14 @@ class OrderAllocator:
     def __init__(self) -> None:
         ...
 
-    def allocate(self, order: Order) -> None:
+    def allocate(self) -> None:
         stock_allocator = StockAllocator()
         price_calculator = PriceCalculator()
         customer_score_checker = CustomerScoreChecker()
         mail_sender = MailSender()
 
 
-class OtherAllocator2:
+class OrderAllocator2:
     def __init__(
         self,
         stock_allocator: StockAllocator,
@@ -43,5 +39,5 @@ class OtherAllocator2:
         self._customer_score_checker = customer_score_checker
         self._main_sender = main_sender
 
-    def allocate(self, order: Order) -> None:
+    def allocate(self) -> None:
         ...

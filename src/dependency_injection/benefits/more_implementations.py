@@ -31,5 +31,5 @@ class ShopCartService:
         self._repository.save(order)
 
 
-service_using_files = ShopCartService(FileOrdersRepository())
-service_using_a_db = ShopCartService(DbOrdersRepository())
+service_using_disk = ShopCartService(FileOrdersRepository())
+service_using_db = ShopCartService(DbOrdersRepository())

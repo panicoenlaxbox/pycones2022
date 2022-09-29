@@ -1,6 +1,9 @@
 import time
 from typing import Callable
 
+from dependency_injector import providers
+from dependency_injector.containers import DeclarativeContainer
+
 
 class ShopCartService:
     def checkout(self) -> None:
@@ -26,9 +29,11 @@ class TimedShopCartService(ShopCartService):
         self._timer(self._shop_cart_service.checkout)
 
 
-def main(shop_cart_service: ShopCartService) -> None:
-    shop_cart_service.checkout()
+class Container(DeclarativeContainer):
+    shop_cart_service = providers.Factory(ShopCartService)
+    # shop_cart_service = providers.Factory(TimedShopCartService, providers.Factory(ShopCartService))
 
 
 if __name__ == "__main__":
-    main(TimedShopCartService(ShopCartService()))
+    container = Container()
+    container.shop_cart_service().checkout()
