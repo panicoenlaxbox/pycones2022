@@ -1,4 +1,4 @@
 {
-  "reader": "json",
-  "path": "../../../data/key_value.json"
+  "reader": "yaml",
+  "path": "../../../data/key_value.yaml"
 }

@@ -33,5 +33,5 @@ class Container(DeclarativeContainer):
         json=json_file_reader,
         yaml=yaml_file_reader,
     )
-    # reader = providers.Factory(_create_reader, _config)
+    # reader = providers.Factory(_create_reader, _config)  # Wait, I can do it also by myself!
     path = _config.path

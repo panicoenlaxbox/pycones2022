@@ -63,11 +63,11 @@ def main(reader: Reader, path: str) -> None:
 
 
 if __name__ == "__main__":
-    # main(YamlFileReader(), "../../../data/key_value.yaml")
+    main(YamlFileReader(), "../../../data/key_value.yaml")
 
-    main(
-        JsonFileReader(
-            JsonSchemaValidator(ResourceLoader("dependency_injection.dependency_injector_library.resources"))
-        ),
-        "../../../data/key_value.json",
-    )
+    # main(
+    #     JsonFileReader(
+    #         JsonSchemaValidator(ResourceLoader("dependency_injection.dependency_injector_library.resources"))
+    #     ),
+    #     "../../../data/key_value.json",
+    # )

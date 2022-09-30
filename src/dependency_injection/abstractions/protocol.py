@@ -5,7 +5,7 @@ class Order:
     ...
 
 
-class Save(Protocol):  # Explicit protocol, statick duck typing, type safety
+class Save(Protocol):  # Explicit protocol, static duck typing, type safety
     def save(self, order: Order) -> None:
         ...
 

@@ -30,10 +30,11 @@ class TimedShopCartService(ShopCartService):
 
 
 class Container(DeclarativeContainer):
-    shop_cart_service = providers.Factory(ShopCartService)
-    # shop_cart_service = providers.Factory(TimedShopCartService, providers.Factory(ShopCartService))
+    # shop_cart_service = providers.Factory(ShopCartService)
+    shop_cart_service = providers.Factory(TimedShopCartService, providers.Factory(ShopCartService))
 
 
 if __name__ == "__main__":
     container = Container()
-    container.shop_cart_service().checkout()
+    shop_cart_service: ShopCartService = container.shop_cart_service()
+    shop_cart_service.checkout()

@@ -36,11 +36,11 @@ class UrlReader(Reader):  # Implementation
 
 
 def main() -> None:
-    reader: Reader = FileReader("../../../data/key_value.json")
-    # reader: Reader = UrlReader("https://www.google.es/")
+    # reader: Reader = FileReader("../../../data/key_value.json")
+    reader: Reader = UrlReader("https://www.google.es/")
     print(reader.read())
 
-    print(reader.path)  # type: ignore
+    # print(reader.path)  # type: ignore
 
 
 if __name__ == "__main__":
