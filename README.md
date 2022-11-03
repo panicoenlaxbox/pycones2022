@@ -2,6 +2,10 @@
 
 In this repository you can find the code and the [presentation](presentation.pdf) of the talk [Inyección de dependencias, fácil!](https://charlas.2022.es.pycon.org/pycones2022/talk/HHM3H7/) from [PyConES 2022](https://2022.es.pycon.org/)
 
+<a href="https://twitter.com/intent/follow?screen_name=panicoenlaxbox">
+    <img src="https://img.shields.io/twitter/follow/panicoenlaxbox.svg?label=Follow%20@panicoenlaxbox" alt="Follow @panicoenlaxbox" />
+</a>
+
 ## Examples
 
 - [src/dependency_injection/dependency_inversion/abstraction_implementation.py](src/dependency_injection/dependency_inversion/abstraction_implementation.py)
